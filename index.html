@@ -1,0 +1,39 @@
+<!-- inside index.html -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Typing game</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Typing game!</h1>
+    <p>Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</p>
+    <p id="quote"></p> <!-- This will display our quote -->
+    <p id="message"></p> <!-- This will display any status messages -->
+    <div id="textbox">
+      <input type="text" aria-label="current word" id="typed-value"/> <!-- The textbox for typing -->
+    </div>
+    <div>
+      <button type="button" id="start">Start</button> <!-- To start the game -->
+    </div>
+    <div id="addPlayer">
+      <input type="text" id="participantName" required/>
+      <button type="button" id="addButton" onclick='addParticipant()'>Add</button>
+    </div>
+    <div id="scoreboard">
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th class="thead quote">Quote</th>
+            <th class="thead participant">Participant</th>
+            <th class="thead score">Score (seconds)</th>
+          </tr>
+        </thead>
+        <tbody id="scoreboardBody">
+          
+        </tbody>
+      </table>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
